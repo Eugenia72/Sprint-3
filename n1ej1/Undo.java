@@ -14,12 +14,8 @@ public class Undo {
     }
 
     public static Undo getInstance() {
-        if (instance == null) {
-            synchronized (Undo.class) {
-                if (instance == null) {
-                    instance = new Undo();
-                }
-            }
+        if(instance==null) {
+            instance = new Undo();
         }
         return instance;
     }
